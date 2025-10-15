@@ -1,0 +1,117 @@
+configuration {
+    show-icons: false;
+}
+
+* {
+    mainbox-spacing: 20px;
+    mainbox-margin: 40px;
+    message-margin: 0px 300px;
+    message-padding: 12px;
+    message-border-radius: 12px;
+    listview-spacing: 25px;
+    element-padding: 45px 0px;
+    element-border-radius: 80px;
+    prompt-font: "JetBrains Mono Nerd Font 20";
+    textbox-font: "JetBrains Mono Nerd Font 16";
+    element-text-font: "JetBrains Mono Nerd Font 36";
+    
+    /* Catppuccin Mocha */
+    background-window: #181825;
+    background-normal: #313244;
+    background-selected: #6c7086;
+    foreground-normal: #cdd6f4;
+    foreground-selected: #f38ba8;
+}
+
+window {
+    location: center;
+    anchor: center;
+    fullscreen: false;
+    width: 1000px;
+    border-radius: 50px;
+    cursor: "default";
+    background-color: @background-window;
+}
+
+mainbox {
+    enabled: true;
+    spacing: @mainbox-spacing;
+    margin: @mainbox-margin;
+    background-color: @background-window;
+    children: [ "dummy", "inputbar", "listview", "message", "uptime", "dummy" ];
+}
+
+inputbar {
+    enabled: true;
+    background-color: @background-window;
+    children: [ "dummy", "prompt", "dummy" ];
+}
+
+dummy {
+    background-color: @background-window;
+}
+
+prompt {
+    enabled: true;
+    font: @prompt-font;
+    background-color: @background-window;
+    text-color: @foreground-normal;
+}
+
+message {
+    enabled: true;
+    margin: @message-margin;
+    padding: @message-padding;
+    border-radius: @message-border-radius;
+    background-color: @background-normal;
+    text-color: @foreground-normal;
+}
+
+textbox {
+    font: @textbox-font;
+    background-color: @background-normal;
+    text-color: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+}
+
+listview {
+    enabled: true;
+    expand: false;
+    columns: 5;
+    lines: 1;
+    cycle: true;
+    dynamic: true;
+    scrollbar: false;
+    layout: vertical;
+    reverse: false;
+    fixed-height: true;
+    fixed-columns: true;
+    spacing: @listview-spacing;
+    background-color: @background-window;
+    cursor: "default";
+}
+
+element {
+    enabled: true;
+    padding: @element-padding;
+    border-radius: @element-border-radius;
+    background-color: @background-normal;
+    text-color: @foreground-normal;
+    cursor: pointer;
+}
+
+element-text {
+    font: @element-text-font;
+    background-color: transparent;
+    text-color: inherit;
+    cursor: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+}
+
+element selected.normal {
+    background-color: @background-selected;
+    text-color: @foreground-selected;
+}
+

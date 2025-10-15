@@ -1,0 +1,178 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+#workspaces {
+    background-color: rgba(17, 17, 27, 0.6);
+    margin: 5px;
+}
+
+#workspaces button {
+    color: #6c7086;
+    transition: all 0.2s ease;
+}
+
+#workspaces button.urgent {
+    color: #f38ba8;
+}
+
+#workspaces button.active {
+    color: #f5c2e7;
+    background: rgba(127, 132, 156, 0.6);
+}
+
+#workspaces button:hover {
+    background: rgba(30, 30, 46, 0.4);
+    color: #cdd6f4;
+}
+
+#bluetooth,
+#pulseaudio,
+#network {
+    background-color: rgba(17, 17, 27, 0.6);
+    margin: 5px 0;
+    border-radius: 0px;
+    transition: all 0.2s ease;
+    padding: 0 6px;
+}
+
+#network {
+    margin-right: 5px;
+}
+
+#cpu,
+#memory {
+    background-color: rgba(17, 17, 27, 0.6);
+    margin: 5px 0;
+    border-radius: 0px;
+    transition: all 0.2s ease;
+    padding: 0 6px;
+}
+
+#memory {
+    margin-right: 5px;
+}
+
+#clock,
+#battery,
+#custom-night-light,
+#custom-caffeine,
+#custom-calendar,
+#custom-power,
+#tray {
+    background-color: rgba(17, 17, 27, 0.6);
+    padding: 0 10px;
+    margin: 5px 0;
+    border-radius: 0px;
+    transition: all 0.2s ease;
+    margin-right: 5px;
+}
+
+#clock {
+    color: #f9e2af;
+}
+
+#battery {
+    color: #a6e3a1;
+}
+
+#battery.warning:not(.charging) {
+    color: #f9e2af;
+}
+
+#battery.critical:not(.charging) {
+    color: #f38ba8;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#cpu {
+    color: #cba6f7;
+}
+
+#memory {
+    color: #f5c2e7;
+}
+
+#network {
+    color: #89dceb;
+}
+
+#network.disabled,
+#network.off {
+    color: #6c7086;
+}
+
+#bluetooth {
+    color: #89b4fa;
+}
+
+#bluetooth.disabled,
+#bluetooth.off {
+    color: #6c7086;
+}
+
+#pulseaudio {
+    color: #74c7ec;
+}
+
+#pulseaudio.muted {
+    color: #6c7086;
+}
+
+#tray {
+    background-color: rgba(17, 17, 27, 0.6);
+}
+
+#custom-power {
+    color: #f38ba8;
+    margin-right: 5px;
+    padding-right: 12px;
+}
+
+#custom-power:hover {
+    background-color: rgba(243, 139, 168, 0.2);
+    color: #f38ba8;
+}
+
+@keyframes blink {
+    to {
+        background-color: #f38ba8;
+        color: rgb(17, 17, 27);
+    }
+}
+
+tooltip {
+    background: rgba(17, 17, 27, 0.95);
+    border: 1px solid #313244;
+    border-radius: 10px;
+}
+
+tooltip label {
+    color: #cdd6f4;
+}
+
+#custom-caffeine {
+    background-color: rgba(17, 17, 27, 0.6);
+    padding: 0 10px;
+    padding-right: 12px;
+    margin: 5px 0;
+    transition: all 0.2s ease;
+    margin-right: 5px;
+    color: #b4befe;
+}
+
+#custom-caffeine.off {
+    color: #6c7086;
+}

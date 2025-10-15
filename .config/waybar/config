@@ -1,0 +1,167 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "spacing": 0,
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "custom/caffeine",
+    "bluetooth",
+    "pulseaudio",
+    "network",
+    "cpu",
+    "memory",
+    "tray",
+    "battery",
+    "custom/power"
+  ],
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{icon}",
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "10",
+      "urgent": "󰞏",
+      "focused": "",
+      "default": ""
+    }
+  },
+  "clock": {
+    "format": " &#x2009;{:%H:%M 󰃭 &#x2009;%b %d}",
+    "tooltip-format": "{calendar}",
+    "calendar": {
+      "mode-mon-col": 3,
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#89b4fa'><b>{}</b></span>",
+        "days": "<span color='#f5c2e7'><b>{}</b></span>",
+        "weekdays": "<span color='#f9e2af'><b>{}</b></span>",
+        "today": "<span color='#f38ba8'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
+  },
+  "custom/caffeine": {
+    "format": "{text}",
+    "exec": "~/.config/hypr/scripts/caffeine.sh status",
+    "return-type": "json",
+    "interval": 1,
+    "on-click": "~/.config/hypr/scripts/caffeine.sh toggle",
+    "tooltip": true
+  },
+  "cpu": {
+    "format": "󰻠 {usage}%",
+    "interval": 1,
+    "tooltip": true,
+    "tooltip-format": "󰻠 Usage: {usage}%\n Load: {load}\n Freq: {avg_frequency}GHz",
+    "on-click": "ghostty -e btop",
+  },
+  "memory": {
+    "format": "󰍛 {percentage}%",
+    "interval": 1,
+    "tooltip": true,
+    "tooltip-format": "󰍛 Used: {used:0.1f}GB/{total:0.1f}GB\n󰍛 Swap: {swapUsed:0.1f}GB/{swapTotal:0.1f}GB",
+    "on-click": "ghostty -e btop",
+  },
+  "battery": {
+    "interval": 1,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": "󰂄 {capacity}%",
+    "format-icons": [
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ]
+  },
+  "bluetooth": {
+    "format": "󰂯 {status}",
+    "format-disabled": "󰂲 {status}",
+    "format-off": "󰂲 {status}",
+    "format-connected": "󰂱 {num_connections}",
+    "tooltip-format": "{controller_alias}\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias} ({device_battery_percentage}%)",
+    "on-click": "bluetoothctl <<< $(bluetoothctl show | awk '/Powered:/ {print ($2 ~ /yes|on/) ? \"power off\" : \"power on\"; exit}')",
+    "on-click-right": "overskride"
+  },
+  "network": {
+    "format": "{icon} {essid}",
+    "format-disabled": "󰤮 off",
+    "format-icons": {
+      "ethernet": "󰈀",
+      "disconnected": "󰤫",
+      "wifi": [
+        "󰤯",
+        "󰤟",
+	"󰤢",
+	"󰤥",
+	"󰤨"
+      ]
+    },
+    "tooltip-format": "Connected to {essid}\nIP: {ipaddr}",
+    "interval": 1,
+    "on-click": "nmcli radio wifi | grep -q enabled && nmcli radio wifi off || nmcli radio wifi on",
+    "on-click-right": "nmgui"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%{format_source}",
+    "format-bluetooth": "󰂰 {volume}%{format_source}",
+    "format-muted": "󰖁{format_source}",
+    "format-source": "",
+    "format-source-muted": " <span color='#f38ba8'>󰍭</span>",
+    "format-icons": {
+      "headphone": "󰋋",
+      "hands-free": "󰄝",
+      "headset": "󰋎",
+      "phone": "󰄜",
+      "portable": "󰄝",
+      "car": "󰄋",
+      "default": [
+        "󰕿",
+        "󰖀",
+        "󰕾"
+      ]
+    },
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click-right": "pavucontrol"
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10
+  },
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "~/.config/hypr/scripts/power-menu.sh",
+    "tooltip": false
+  }
+}
