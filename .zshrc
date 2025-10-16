@@ -14,6 +14,7 @@ compinit
 export VISUAL="nvim"
 export EDITOR="nvim"
 export PATH=$PATH:$HOME/.local/bin
+bindkey -s ^f "~/.config/hypr/scripts/tmux-sessionizer.sh\n"
 export PATH=$PATH:/usr/local/texlive/2025/bin/x86_64-linux
 source <(fzf --zsh)
 alias ls='eza --icons'
