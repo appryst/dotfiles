@@ -242,7 +242,7 @@ find_dirs() {
             path="$entry"
         fi
 
-        [[ -d "$path" ]] && find "$path" -mindepth 1 -maxdepth "${depth:-${TS_MAX_DEPTH:-1}}" -path '*/.git' -prune -o -type d -print
+        [[ -d "$path" ]] && find -L "$path" -mindepth 1 -maxdepth "${depth:-${TS_MAX_DEPTH:-1}}" -path '*/.git' -prune -o -type d -print
     done
 }
 
@@ -332,12 +332,16 @@ fi
 selected_name=$(basename "$selected" | tr . _)
 
 if ! is_tmux_running; then
-    tmux new-session -ds "$selected_name" -c "$selected"
+    tmux new-session -ds "$selected_name" -c "$selected" "nvim"
+    tmux new-window -t "$selected_name" -c "$selected"
+    tmux select-window -t "$selected_name:1"
     hydrate "$selected_name" "$selected"
 fi
 
 if ! has_session "$selected_name"; then
-    tmux new-session -ds "$selected_name" -c "$selected"
+    tmux new-session -ds "$selected_name" -c "$selected" "nvim"
+    tmux new-window -t "$selected_name" -c "$selected"
+    tmux select-window -t "$selected_name:1"
     hydrate "$selected_name" "$selected"
 fi
 

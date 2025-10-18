@@ -54,3 +54,10 @@ vim.lsp.config('ltex_plus', {
   }
 })
 
+vim.lsp.config('copilot', {
+  settings = {
+    telemetry = {
+      telemetryLevel = "off",
+    }
+  }
+})
