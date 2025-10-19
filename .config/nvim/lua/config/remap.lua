@@ -23,10 +23,15 @@ vim.keymap.set("x", "<leader>p", '"_dP')
 -- Yank into system clipboard
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
-vim.keymap.set("n", "<Leader>fo", ":lua vim.lsp.buf.format()<CR>", s)
 
 -- Go to normal mode in Terminal
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>")
 
 -- Tmux-sessionizer (thanks primeagen)
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer.sh<CR>")
+
+-- Move between splits
+vim.keymap.set('n', '<C-h>', '<C-w>h', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-j>', '<C-w>j', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-l>', '<C-w>l', { noremap = true, silent = true })
