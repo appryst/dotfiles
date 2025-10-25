@@ -5,6 +5,7 @@
         "pink": "#F5BDE6",
         "lavender": "#B7BDF8",
         "blue":  "#8AADF4",
+        "maroon": "#eba0ac",
         "wight": "#FFFFFF",
         "text": "#494D64"
   },
@@ -41,6 +42,14 @@
           "style": "powerline",
           "template": " {{ .Path }}",
           "type": "path"
+        },
+        {
+        "type": "python",
+        "style": "powerline",
+        "powerline_symbol": "",
+        "foreground": "p:text",
+        "background": "p:maroon",
+        "template": "  {{ .Full }} {{ if .Venv }}{{ .Venv }}{{ end }}"
         },
         {
           "background": "p:lavender",

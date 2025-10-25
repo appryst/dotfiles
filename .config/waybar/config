@@ -112,7 +112,7 @@
     "tooltip-format-connected": "{controller_alias}\n{num_connections} connected\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias} ({device_battery_percentage}%)",
     "on-click": "bluetoothctl <<< $(bluetoothctl show | awk '/Powered:/ {print ($2 ~ /yes|on/) ? \"power off\" : \"power on\"; exit}')",
-    "on-click-right": "overskride"
+    "on-click-right": "ghostty -e bluetui"
   },
   "network": {
     "format": "{icon} {essid}",
@@ -136,9 +136,9 @@
   "pulseaudio": {
     "format": "{icon} {volume}%{format_source}",
     "format-bluetooth": "󰂰 {volume}%{format_source}",
-    "format-muted": "󰖁{format_source}",
+    "format-muted": "󰖁 off",
     "format-source": "",
-    "format-source-muted": " <span color='#f38ba8'>󰍭</span>",
+    "format-source-muted": " <span color='#f38ba8'>󰍭 muted</span>",
     "format-icons": {
       "headphone": "󰋋",
       "hands-free": "󰄝",

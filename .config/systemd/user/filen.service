@@ -1,0 +1,13 @@
+[Unit]
+Description=Syncing with FilenCLI
+After=network-online.target
+Wants=network-online.target 
+
+[Service]
+Type=simple
+ExecStart=%h/.filen-cli/bin/filen sync %h/documents/:/documents --continuous
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

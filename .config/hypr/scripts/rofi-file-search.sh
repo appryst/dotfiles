@@ -2,7 +2,7 @@
 
 selection=$(fd . --hidden --type f "$HOME" 2>/dev/null | \
     sed "s;$HOME;~;" | \
-    rofi -sort -sorting-method fzf -disable-history -keep-right -dmenu -i -theme catppuccin -no-custom -p " File Search" | \
+    rofi -sort -sorting-method fzf -disable-history -keep-right -dmenu -i -theme catppuccin -no-custom -p "󰍉 File Search" | \
     sed "s;~;$HOME;")
 
 if [ -n "$selection" ]; then
