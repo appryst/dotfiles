@@ -1,1 +1,3 @@
 **/default.target.wants/
+**/workspaces.conf
+**/monitors.conf
