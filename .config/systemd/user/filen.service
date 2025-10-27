@@ -5,7 +5,7 @@ Wants=network-online.target
 
 [Service]
 Type=simple
-ExecStart=%h/.filen-cli/bin/filen sync %h/documents/:/documents --continuous
+ExecStart=%h/.filen-cli/bin/filen sync documents --continuous
 Restart=on-failure
 RestartSec=5
 

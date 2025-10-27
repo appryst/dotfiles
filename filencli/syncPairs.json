@@ -1,0 +1,11 @@
+[
+    {
+        "local": "/home/noah/documents",
+        "remote": "/documents",
+        "syncMode": "twoWay",
+        "alias": "documents",
+        "ignore": ["**/.venv/", "**/venv/", "/__pycache__/", "*.pyc", "*.pyo", "*.pyd", "**/build/", "**/dist/", "**/*.egg-info/", "**/node_modules/", "*.log", "*.tmp", "*.bak", "**/.idea/", ".env", ".env.*", "**/*_files/", "**/docs/out/", "**/.vscode/", "**/.idea/"],
+        "disableLocalTrash": false,
+        "excludeDotFiles": false
+    }
+]
