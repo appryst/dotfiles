@@ -1,0 +1,4 @@
+[[mgr.prepend_keymap]]
+on   = [ "g", "u" ]
+run  = "cd ~/documents/Uni/Infomatik/Semester-2"
+desc = "Cd to current semester"

@@ -131,7 +131,7 @@
     "tooltip-format": "Connected to {essid}\nIP: {ipaddr}",
     "interval": 1,
     "on-click": "nmcli radio wifi | grep -q enabled && nmcli radio wifi off || nmcli radio wifi on",
-    "on-click-right": "nmgui"
+    "on-click-right": "ghostty -e impala"
   },
   "pulseaudio": {
     "format": "{icon} {volume}%{format_source}",
