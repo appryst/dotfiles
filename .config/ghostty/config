@@ -24,6 +24,9 @@ font-size = 14
 theme = Catppuccin Mocha
 background-opacity = 0.9
 background-blur = true 
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
 # window-padding-x = 2
 #
 # # Spacing around the equals sign does not matter.
