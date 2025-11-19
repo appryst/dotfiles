@@ -33,8 +33,8 @@ vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>")
 -- Tmux-sessionizer (thanks primeagen)
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer.sh<CR>")
 
--- Move between splits
-vim.keymap.set('n', '<C-h>', '<C-w>h', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-j>', '<C-w>j', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-l>', '<C-w>l', { noremap = true, silent = true })
+-- Navigate quickfix and loclist
+vim.keymap.set("n", "<M-j>", "<cmd>cnext<CR>zz")
+vim.keymap.set("n", "<M-k>", "<cmd>cprev<CR>zz")
+vim.keymap.set("n", "<leader>j", "<cmd>lnext<CR>zz")
+vim.keymap.set("n", "<leader>k", "<cmd>lprev<CR>zz")
