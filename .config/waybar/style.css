@@ -89,12 +89,8 @@ window#waybar {
 }
 
 #battery.critical:not(.charging) {
-    color: #f38ba8;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    color: #11111b;
+    background-color: #f38ba8;
 }
 
 #cpu {
@@ -144,13 +140,6 @@ window#waybar {
 #custom-power:hover {
     background-color: rgba(243, 139, 168, 0.2);
     color: #f38ba8;
-}
-
-@keyframes blink {
-    to {
-        background-color: #f38ba8;
-        color: rgb(17, 17, 27);
-    }
 }
 
 tooltip {
