@@ -4,10 +4,12 @@ return {
   lazy = false,
   ---@type snacks.Config
   opts = {
-    dashboard = { enabled = true },
-    lazygit = { enabled = true}
+    picker = { enabled = true}
   },
   keys = {
-      { "<leader>lg", function() require("snacks").lazygit() end, desc = "Open Lazygit" },
-    }
+    { "<leader><space>", function() Snacks.picker.smart() end, desc = "Smart Find Files" },
+    { "<leader>ff", function() Snacks.picker.files() end, desc = "Find Files" },
+    { "<leader>fg", function() Snacks.picker.grep() end, desc = "Grep" },
+    { "<leader>fb", function() Snacks.picker.buffers() end, desc = "Buffers" },
+  }
 }
