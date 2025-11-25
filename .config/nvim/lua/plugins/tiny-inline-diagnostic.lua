@@ -6,6 +6,7 @@ return {
 		require("tiny-inline-diagnostic").setup({
 			preset = "classic",
 			transparent_bg = true,
+            transparent_cursorline = false,
 			options = {
 				multilines = {
 					enabled = true,
