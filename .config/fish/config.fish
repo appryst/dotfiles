@@ -29,7 +29,7 @@ function y
 	rm -f -- "$tmp"
 end
 
-zoxide init fish | source
+zoxide init --cmd cd fish | source
 
 set -x VIRTUAL_ENV_DISABLE_PROMPT 1
 
