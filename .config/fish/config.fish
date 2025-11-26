@@ -33,22 +33,14 @@ zoxide init --cmd cd fish | source
 
 set -x VIRTUAL_ENV_DISABLE_PROMPT 1
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-if test -f /opt/miniconda3/bin/conda
-    eval /opt/miniconda3/bin/conda "shell.fish" "hook" $argv | source
-else
-    if test -f "/opt/miniconda3/etc/fish/conf.d/conda.fish"
-        . "/opt/miniconda3/etc/fish/conf.d/conda.fish"
-    else
-        set -x PATH "/opt/miniconda3/bin" $PATH
-    end
+# Quick Conda init
+if test -f /opt/miniconda3/etc/fish/conf.d/conda.fish
+    source /opt/miniconda3/etc/fish/conf.d/conda.fish
 end
-# <<< conda initialize <<<
 
 eval (oh-my-posh init fish --config $HOME/oh-my-posh/zen.toml)
 
-# Start Hyprlaand at login
+# Start Hyprland at login
 if status is-login
     if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
         exec hyprland -- -keeptty
