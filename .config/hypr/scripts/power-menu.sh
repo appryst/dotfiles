@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Power Menu Script (keymap in hyprland.conf)
 # Author: Binoy Manoj

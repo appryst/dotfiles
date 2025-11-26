@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Caffeine Script (for keeping the screen awake - keymap in hyprland.conf)
 # Author: Binoy Manoj

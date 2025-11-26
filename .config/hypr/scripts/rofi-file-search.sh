@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 selection=$(fd . --hidden --type f "$HOME" 2>/dev/null | \
     sed "s;$HOME;~;" | \
