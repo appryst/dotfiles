@@ -56,7 +56,8 @@ crust = "#11111b"
 
     [blocks.segments.properties]
       cache_duration = 'none'
-      style = 'full'
+      style = 'agnoster_short'
+      max_depth = 2
 
   [[blocks.segments]]
     template = ' <p:subtext0>on</> {{ .HEAD }}'
