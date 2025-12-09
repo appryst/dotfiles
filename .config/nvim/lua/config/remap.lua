@@ -2,9 +2,6 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 vim.keymap.set("n", "<space>", "<Nop>")
 
--- Clashes with mini surround
-vim.keymap.set({ 'n', 'x' }, 's', '<Nop>')
-
 -- Clear highlights on search when pressing <Esc> in normal mode
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
