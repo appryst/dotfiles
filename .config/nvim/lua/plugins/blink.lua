@@ -50,7 +50,7 @@ return {
 	},
 	opts_extend = { "sources.default" },
 	config = function()
-        require("luasnip").setup({ enable_autosnippets = true })
+	       require("luasnip").setup({ enable_autosnippets = true })
 		require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/lua/snippets" })
 	end,
 }
