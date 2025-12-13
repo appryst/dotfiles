@@ -18,4 +18,7 @@ return {
 	s({ trig = "v" },
 		fmta("#let <> = <>", { i(1), i(2) })
 	),
+	s({ trig = "brc", snippetType = "autosnippet" },
+		fmta("\\(<>\\) ", { i(1) })
+	),
 }
