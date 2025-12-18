@@ -29,8 +29,7 @@ tooltip {
 #custom-caffeine,
 #bluetooth,
 #network,
-#custom-expand-icon,
-#custom-screenrecording-indicator {
+#custom-expand-icon {
   min-width: 12px;
   padding: 0 6px;
 }

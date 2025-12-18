@@ -113,7 +113,7 @@
     "on-click-right": "pavucontrol",
     "tooltip-format": "Playing at {volume}%",
     "scroll-step": 5,
-    "format-muted": "",
+    "format-muted": "{format_source}",
     "format-source": "",
     "format-source-muted": " | <span color='#f38ba8'>󰍭</span>",
     "format-icons": {
