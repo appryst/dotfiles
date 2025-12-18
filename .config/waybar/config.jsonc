@@ -90,12 +90,11 @@
     },
     "format-full": "󰂅",
     "interval": 5,
-    "on-click": "omarchy-menu power",
     "states": {
       "warning": 30,
       "critical": 10
     },
-    "tooltip-format": "{capacity}% | {timeTo}"
+    "tooltip-format": "{timeTo} | {capacity}%"
   },
   "bluetooth": {
     "format": "",
