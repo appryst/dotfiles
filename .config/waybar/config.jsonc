@@ -77,7 +77,7 @@
     "interval": 3,
     "spacing": 1,
     "on-click": "nmcli radio wifi | grep -q enabled && nmcli radio wifi off || nmcli radio wifi on",
-    "on-click-right": "ghostty -e impala"
+    "on-click-right": "ghostty --class='ghostty.impala' -e impala"
   },
   "battery": {
     "format": "{capacity}% {icon}",
@@ -104,7 +104,7 @@
     "format-no-controller": "",
     "tooltip-format": "Devices connected: {num_connections}",
     "on-click": "bluetoothctl <<< $(bluetoothctl show | awk '/Powered:/ {print ($2 ~ /yes|on/) ? \"power off\" : \"power on\"; exit}')",
-    "on-click-right": "ghostty -e bluetui"
+    "on-click-right": "ghostty --class='ghostty.bluetui' -e bluetui"
   },
   "pulseaudio": {
     "format": "{icon}{format_source}",
@@ -141,13 +141,13 @@
     "interval": 1,
     "tooltip": true,
     "tooltip-format": "󰻠 Usage: {usage}%\n Load: {load}\n Freq: {avg_frequency}GHz",
-    "on-click": "ghostty -e btop",
+    "on-click": "ghostty --class='ghostty.btop' -e btop",
   },
   "memory": {
     "format": "󰍛 {percentage}%",
     "interval": 1,
     "tooltip": true,
     "tooltip-format": "󰍛 Used: {used:0.1f}GB/{total:0.1f}GB\n󰍛 Swap: {swapUsed:0.1f}GB/{swapTotal:0.1f}GB",
-    "on-click": "ghostty -e btop",
+    "on-click": "ghostty --class='ghostty.btop' -e btop",
   },
 }
