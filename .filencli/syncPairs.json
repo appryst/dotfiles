@@ -1,6 +1,6 @@
 [
     {
-        "local": "/home/noah/documents",
+        "local": "/home/tux/documents",
         "remote": "/documents",
         "syncMode": "twoWay",
         "alias": "documents",
