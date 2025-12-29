@@ -34,7 +34,3 @@ export VIRTUAL_ENV_DISABLE_PROMPT=true
 eval "$(oh-my-posh init zsh --config $HOME/oh-my-posh/zen.toml)"
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-
-# filen-cli
-PATH=$PATH:~/.filen-cli/bin
