@@ -14,6 +14,9 @@ bind ctrl-f 'tmux-sessionizer.sh ""'
 # OpenSSL legacy restriction
 set -x CRYPTOGRAPHY_OPENSSL_NO_LEGACY 1
 
+# No fish greeting :(
+set -g fish_greeting
+
 # Set up fzf key bindings
 fzf --fish | source
 # Alias
@@ -39,10 +42,3 @@ if test -f /opt/miniconda3/etc/fish/conf.d/conda.fish
 end
 
 eval (oh-my-posh init fish --config $HOME/oh-my-posh/zen.toml)
-
-# Start Hyprland at login
-if status is-login
-    if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
-        exec hyprland -- -keeptty
-    end
-end
