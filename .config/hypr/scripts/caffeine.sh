@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-# Caffeine Script (for keeping the screen awake - keymap in hyprland.conf)
-# Author: Binoy Manoj
-# GitHub: https://github.com/binoymanoj
-
 CAFFEINE_STATE_FILE="/tmp/caffeine_state"
 
 status() {

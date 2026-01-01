@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-# Power Menu Script (keymap in hyprland.conf)
-# Author: Binoy Manoj
-# GitHub: https://github.com/binoymanoj
-
-# Options with icons (requires Font Awesome)
 shutdown=" "
 reboot=" "
 suspend=""
