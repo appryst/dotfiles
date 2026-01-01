@@ -27,6 +27,7 @@ tooltip {
 #pulseaudio,
 #tray,
 #custom-caffeine,
+#custom-vpn,
 #bluetooth,
 #network,
 #custom-expand-icon {
@@ -46,6 +47,7 @@ tooltip {
 #network.disabled,
 #network.off,
 #custom-caffeine.off,
+#custom-vpn.off,
 #bluetooth.disabled,
 #bluetooth.off,
 #pulseaudio.muted {

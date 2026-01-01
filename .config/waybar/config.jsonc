@@ -8,6 +8,7 @@
   "modules-right": [
     "group/tray-expander",
     "custom/caffeine",
+    "custom/vpn",
     "bluetooth",
     "network",
     "pulseaudio",
@@ -37,6 +38,14 @@
     "return-type": "json",
     "interval": 1,
     "on-click": "~/.config/hypr/scripts/caffeine.sh toggle",
+    "tooltip": true
+  },
+   "custom/vpn": {
+    "format": "{text}",
+    "exec": "~/.config/hypr/scripts/uni-vpn.sh status",
+    "return-type": "json",
+    "interval": 1,
+    "on-click": "~/.config/hypr/scripts/uni-vpn.sh toggle",
     "tooltip": true
   },
   "cpu": {
