@@ -4,7 +4,7 @@ return {
 
   config = function()
     require("nvim-treesitter.configs").setup({
-        ignore_install = {"latex"},
+        ignore_install = {"latex", "csv"},
         ensure_installed = {
           "bash",
           "lua",
