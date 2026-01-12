@@ -3,5 +3,7 @@ use = "yazi-rs/plugins:git"
 rev = "9a52857"
 hash = "63b6c222bf2103b3023389dde5e2ecfe"
 
-[flavor]
-deps = []
+[[flavor.deps]]
+use = "yazi-rs/flavors:catppuccin-mocha"
+rev = "4a1802a"
+hash = "b951d27afe197d154f6da9683b46c5f8"
