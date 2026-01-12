@@ -28,8 +28,6 @@ wall_selection=$(find "${wall_dir}"  -maxdepth 1  -type f \( -iname "*.jpg" -o -
 [[ -n "$wall_selection" ]] || exit 1
 TARGET="$wall_dir/$wall_selection"
 ln -sf "$TARGET" "$LINK"
-hyprctl hyprpaper unload all
-hyprctl hyprpaper preload "$LINK"
-hyprctl hyprpaper wallpaper ",$LINK"
+hyprctl hyprpaper wallpaper ", $LINK"
 exit 0
 
