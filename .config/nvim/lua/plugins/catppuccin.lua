@@ -11,6 +11,12 @@ return {
                 transparent = true,
             },
             auto_integrations = true,
+            -- Mini.nvim jump highlight color
+            custom_highlights = function()
+                return {
+                    MiniJump = { link = "IncSearch" },
+                }
+            end,
         })
         vim.cmd.colorscheme "catppuccin-mocha"
     end
