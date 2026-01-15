@@ -41,4 +41,9 @@ if test -f /opt/miniconda3/etc/fish/conf.d/conda.fish
     source /opt/miniconda3/etc/fish/conf.d/conda.fish
 end
 
+# Gnome keyring ssh
+if test -S "$XDG_RUNTIME_DIR/gcr/ssh"
+    set -gx SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/gcr/ssh"
+end
+
 eval (oh-my-posh init fish --config $HOME/oh-my-posh/zen.toml)
