@@ -14,6 +14,6 @@ return {
                 show_all_diags_on_cursorline = true,
 			},
 		})
-		vim.diagnostic.config({ virtual_text = false }) -- Disable Neovim's default virtual text diagnostics
+		vim.diagnostic.config({ virtual_text = true }) -- Disable Neovim's default virtual text diagnostics
 	end,
 }
