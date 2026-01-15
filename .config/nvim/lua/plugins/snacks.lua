@@ -5,7 +5,7 @@ return {
   ---@type snacks.Config
   opts = {
     picker = { enabled = true},
-    statuscolumn = { enabled = true}
+    statuscolumn = { enabled = true, left = { "sign"}}
   },
   keys = {
     { "<leader><space>", function() Snacks.picker.smart() end, desc = "Smart Find Files" },
