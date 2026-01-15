@@ -2,3 +2,7 @@
 on   = [ "g", "u" ]
 run  = "cd ~/documents/Uni/Infomatik/Semester-2"
 desc = "Cd to current semester"
+
+[[mgr.prepend_keymap]]
+on  = "<C-n>"
+run = "shell -- ripdrag %s -x 2>/dev/null &"
