@@ -27,6 +27,7 @@ background-blur = true
 cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
+shell-integration-features = ssh-terminfo
 # window-padding-x = 2
 #
 # # Spacing around the equals sign does not matter.

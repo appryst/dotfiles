@@ -8,3 +8,4 @@ set selection-clipboard clipboard
 
 # enable incremental search
 set incremental-search true
+# set recolor-keephue true

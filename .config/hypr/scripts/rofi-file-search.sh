@@ -8,13 +8,13 @@ selection=$(fd . --hidden --type f "$HOME" 2>/dev/null | \
 if [ -n "$selection" ]; then
     filename="${selection##*/}"
     case "${selection##*.}" in
-        txt|md|markdown|c|cpp|cc|cxx|css|h|hpp|hh|hxx|py|java|js|ts|tsx|jsx|sh|bash|zsh|fish|lua|vim|tex|rb|pl|pm|php|go|rs|swift|kt|kts|scala|r|jl|sql|json|jsonc|yaml|yml|ini|conf|cfg|dockerfile|make|mk|gradle|groovy|bat|rasi|ps1)
+        txt|md|markdown|c|cpp|cc|cxx|css|h|hpp|hh|hxx|py|java|config|js|ts|tsx|jsx|sh|bash|zsh|fish|lua|vim|tex|rb|pl|pm|php|go|rs|swift|kt|kts|scala|r|jl|sql|json|jsonc|yaml|yml|ini|conf|cfg|dockerfile|make|mk|gradle|groovy|bat|rasi|ps1)
             ghostty -e nvim "$selection"
             ;;
         *)
-            # Prüfen auf bekannte dotfiles
+            # dotfiles
             case "$filename" in
-                .zshrc|.bashrc|.vimrc|.gitconfig|.tmux.conf|config|.config/*)
+                .zshrc|.bashrc|.vimrc|.gitconfig|.tmux.conf|.config/*)
                     ghostty -e nvim "$selection"
                     ;;
                 *)

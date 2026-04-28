@@ -1,5 +1,6 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.cmdheight = 1
 
 vim.opt.mouse = 'a'
 
@@ -45,14 +46,6 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- Preview substitutions live, as you type!
 vim.o.inccommand = 'split'
-
-vim.lsp.config('ltex_plus', {
-  settings = {
-    ltex = {
-      language = "de-DE",
-    }
-  }
-})
 
 vim.lsp.config('copilot', {
   settings = {

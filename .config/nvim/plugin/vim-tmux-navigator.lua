@@ -1,0 +1,9 @@
+vim.pack.add({
+    { src = "https://github.com/christoomey/vim-tmux-navigator" },
+})
+
+vim.keymap.set('n', '<C-h>', '<cmd>TmuxNavigateLeft<CR>',  { silent = true })
+vim.keymap.set('n', '<C-j>', '<cmd>TmuxNavigateDown<CR>',  { silent = true })
+vim.keymap.set('n', '<C-k>', '<cmd>TmuxNavigateUp<CR>',    { silent = true })
+vim.keymap.set('n', '<C-l>', '<cmd>TmuxNavigateRight<CR>', { silent = true })
+vim.keymap.set('n', '<C-\\>', '<cmd>TmuxNavigatePrevious<CR>', { silent = true })

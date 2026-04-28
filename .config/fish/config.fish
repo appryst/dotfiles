@@ -13,6 +13,8 @@ bind ctrl-f 'tmux-sessionizer.sh ""'
 
 # OpenSSL legacy restriction
 set -x CRYPTOGRAPHY_OPENSSL_NO_LEGACY 1
+set -x QT_QPA_PLATFORM wayland
+set -x ANKI_WAYLAND 1
 
 # No fish greeting :(
 set -g fish_greeting
