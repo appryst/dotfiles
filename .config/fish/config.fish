@@ -15,6 +15,7 @@ bind ctrl-f 'tmux-sessionizer.sh ""'
 set -x CRYPTOGRAPHY_OPENSSL_NO_LEGACY 1
 set -x QT_QPA_PLATFORM wayland
 set -x ANKI_WAYLAND 1
+set -x SSH_AUTH_SOCK $HOME/.bitwarden-ssh-agent.sock
 
 # No fish greeting :(
 set -g fish_greeting
@@ -38,14 +39,9 @@ zoxide init --cmd cd fish | source
 
 set -x VIRTUAL_ENV_DISABLE_PROMPT 1
 
-# Quick Conda init
-if test -f /opt/miniconda3/etc/fish/conf.d/conda.fish
-    source /opt/miniconda3/etc/fish/conf.d/conda.fish
-end
-
-# Gnome keyring ssh
-if test -S "$XDG_RUNTIME_DIR/gcr/ssh"
-    set -gx SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/gcr/ssh"
-end
+# # Quick Conda init
+# if test -f /opt/miniconda3/etc/fish/conf.d/conda.fish
+#     source /opt/miniconda3/etc/fish/conf.d/conda.fish
+# end
 
 eval (oh-my-posh init fish --config $HOME/oh-my-posh/zen.toml)
