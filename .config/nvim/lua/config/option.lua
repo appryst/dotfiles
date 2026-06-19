@@ -46,6 +46,7 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- Preview substitutions live, as you type!
 vim.o.inccommand = 'split'
+vim.opt.conceallevel = 1
 
 vim.lsp.config('copilot', {
   settings = {
