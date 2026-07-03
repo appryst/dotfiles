@@ -13,13 +13,13 @@ status() {
 toggle() {
     if [ -f "$VPN_STATE_FILE" ]; then
         rm "$VPN_STATE_FILE"
-        nmcli connection down Uni_VPN
+        nmcli connection down Uni-VPN
         # mullvad connect
         notify-send -i vpn-off "󱙗 Uni VPN" "Disabled"
     else
         touch "$VPN_STATE_FILE"
         # mullvad disconnect
-        nmcli connection up Uni_VPN
+        nmcli connection up Uni-VPN
         notify-send -i vpn-on "󰺀 Uni VPN" "Enabled"
     fi
 }
