@@ -1,17 +1,17 @@
 vim.pack.add({
-    {
-        src = "https://github.com/saghen/blink.cmp",
-        version = vim.version.range("*"),
-    },
+	{
+		src = "https://github.com/saghen/blink.cmp",
+		version = vim.version.range("*"),
+	},
 })
 
 require("blink.cmp").setup({
-    fuzzy = { implementation = "prefer_rust_with_warning" },
+	fuzzy = { implementation = "prefer_rust_with_warning" },
 	signature = { enabled = true },
 	keymap = {
 		preset = "super-tab",
-        ['<C-k>'] = { 'select_prev', 'fallback_to_mappings' },
-        ['<C-j>'] = { 'select_next', 'fallback_to_mappings' },
+		["<C-k>"] = { "select_prev", "fallback_to_mappings" },
+		["<C-j>"] = { "select_next", "fallback_to_mappings" },
 	},
 
 	appearance = {
