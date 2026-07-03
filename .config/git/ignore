@@ -1,2 +1,4 @@
 **/.clangd
 **/.cache
+
+**/.claude/settings.local.json
