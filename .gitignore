@@ -1,3 +1,5 @@
 **/default.target.wants/
 **/workspaces.conf
 **/monitors.conf
+.filen-cli/*
+!.filen-cli/syncPairs
