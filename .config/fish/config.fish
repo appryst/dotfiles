@@ -1,10 +1,14 @@
+function nvim
+    flatpak run io.neovim.nvim $argv
+end
+
 # Editor
 set -x VISUAL nvim
 set -x EDITOR nvim
 
 # PATH additions
 fish_add_path $HOME/.local/bin
-fish_add_path $HOME/.config/hypr/scripts
+fish_add_path $HOME/.config/scripts
 fish_add_path $HOME/.filen-cli/bin
 fish_add_path /usr/local/texlive/2025/bin/x86_64-linux
 
@@ -23,7 +27,7 @@ set -g fish_greeting
 # Set up fzf key bindings
 fzf --fish | source
 # Alias
-alias ls='eza --icons'
+alias ls='eza --icons=auto'
 
 # Yazi
 function y
