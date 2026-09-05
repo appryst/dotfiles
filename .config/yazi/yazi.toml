@@ -10,3 +10,9 @@ group = "git"
 url   = "*/"
 run   = "git"
 group = "git"
+
+[opener]
+edit = [
+    { run = 'flatpak run io.neovim.nvim %s', block = true, for = "unix" },
+]
+
