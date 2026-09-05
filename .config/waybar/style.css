@@ -26,7 +26,7 @@ tooltip {
 #battery,
 #pulseaudio,
 #tray,
-#custom-caffeine,
+#idle_inhibitor,
 #custom-vpn,
 #bluetooth,
 #network,
@@ -46,7 +46,7 @@ tooltip {
 
 #network.disabled,
 #network.off,
-#custom-caffeine.off,
+#idle_inhibitor.deactivated,
 #custom-vpn.off,
 #bluetooth.disabled,
 #bluetooth.off,

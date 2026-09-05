@@ -22,9 +22,9 @@ case $selected_option in
         systemctl suspend
         ;;
     "$lock")
-        hyprlock
+        loginctl lock-session
         ;;
     "$logout")
-        hyprctl dispatch exit
+        swaymsg exit
         ;;
 esac

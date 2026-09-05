@@ -13,11 +13,11 @@ status() {
 toggle() {
     if [ -f "$CAFFEINE_STATE_FILE" ]; then
         rm "$CAFFEINE_STATE_FILE"
-        hypridle & # Restart hypridle
+        swayidle & # Restart hypridle
         notify-send -i caffeine-off "󰾫 Caffeine Mode" "Disabled" -h string:x-canonical-private-synchronous:caffeine
     else
         touch "$CAFFEINE_STATE_FILE"
-        pkill hypridle  # Stop hypridle
+        pkill swayidle  # Stop hypridle
         notify-send -i caffeine-on "󰛊 Caffeine Mode" "Enabled" -h string:x-canonical-private-synchronous:caffeine
     fi
 }
