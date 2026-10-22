@@ -10,7 +10,6 @@ set -x EDITOR nvim
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.config/scripts
 fish_add_path $HOME/.filen-cli/bin
-fish_add_path /usr/local/texlive/2025/bin/x86_64-linux
 
 # Keybinding for tmux-sessionizer (Ctrl+f)
 bind ctrl-f 'tmux-sessionizer.sh ""'
@@ -18,8 +17,7 @@ bind ctrl-f 'tmux-sessionizer.sh ""'
 # OpenSSL legacy restriction
 set -x CRYPTOGRAPHY_OPENSSL_NO_LEGACY 1
 set -x QT_QPA_PLATFORM wayland
-set -x ANKI_WAYLAND 1
-set -x SSH_AUTH_SOCK $HOME/.bitwarden-ssh-agent.sock
+# set -x SSH_AUTH_SOCK $HOME/.bitwarden-ssh-agent.sock
 
 # No fish greeting :(
 set -g fish_greeting
@@ -48,4 +46,4 @@ set -x VIRTUAL_ENV_DISABLE_PROMPT 1
 #     source /opt/miniconda3/etc/fish/conf.d/conda.fish
 # end
 
-eval (oh-my-posh init fish --config $HOME/oh-my-posh/zen.toml)
+oh-my-posh init fish --config $HOME/oh-my-posh/zen.toml | source

@@ -3,3 +3,4 @@
 **/monitors.conf
 .filen-cli/*
 !.filen-cli/syncPairs
+**/fish_variables

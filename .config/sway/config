@@ -28,6 +28,8 @@ set $rofi_cmd rofi \
 # TODO: add window with the next release of rofi-wayland
 set $menu $rofi_cmd -show drun #run -modes combi
 
+# exec_always dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway DISPLAY
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
@@ -91,6 +93,9 @@ input type:keyboard {
     bindsym $mod+Shift+space exec ~/.config/scripts/rofi-file-search.sh
 
     bindsym $mod+Shift+p exec ~/.config/scripts/power-menu.sh
+
+    bindsym $mod+Shift+S exec grimshot --notify save area
+    bindsym $mod+S exec grimshot --notify save window
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -165,7 +170,7 @@ input type:keyboard {
     #bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
+    # bindsym $mod+s layout stacking
     bindsym $mod+w layout tabbed
     # bindsym $mod+e layout toggle split
 
