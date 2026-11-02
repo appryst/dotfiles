@@ -46,4 +46,4 @@ set -x VIRTUAL_ENV_DISABLE_PROMPT 1
 #     source /opt/miniconda3/etc/fish/conf.d/conda.fish
 # end
 
-oh-my-posh init fish --config $HOME/oh-my-posh/zen.toml | source
+set -g fish_transient_prompt 1
